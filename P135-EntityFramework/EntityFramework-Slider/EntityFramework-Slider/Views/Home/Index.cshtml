@@ -1,0 +1,303 @@
+﻿@model HomeVM
+@{
+    ViewData["Title"] = "Home";
+}
+
+    <!-- MAIN START -->
+   
+    <main>
+
+        <!-- SLIDER START -->
+
+        <section id="slider">
+            <div class="owl-carousel slider">
+            @foreach (var item in Model.Sliders)
+            {
+              <div> <img src="~/img/@item.Image" alt=""> </div>
+            }
+
+             
+            </div>
+
+        @if(Model.SliderInfo != null)
+        {
+              <div class="container context pl-lg-5 ml-lg-3">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="text">
+                            @Html.Raw(Model.SliderInfo.Title)
+                            <p class="text-black-50 d-none d-sm-block">@Model.SliderInfo.Description </p>
+                        </div>
+                        <div class="img">
+                            <img src="~/img/@Model.SliderInfo.SignatureImage" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        else
+        {
+             <div class="container context pl-lg-5 ml-lg-3">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="text">
+                            P135 Title
+                            <p class="text-black-50 d-none d-sm-block">P135 Description </p>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        }
+
+        </section>
+
+        <!-- SLIDER END -->
+
+        <!-- PRODUCTS START -->
+
+        <section id="products">
+            <div class="container">
+                <div class="row pt-5">
+                    <div class="col-12 d-flex justify-content-between">
+                        <ul class="category-mobile d-md-none list-unstyled">
+                            <li>
+                                <a href="" class="categories mr-2">Categories</a>
+                                <i class="fas fa-caret-down"></i>
+                                <ul class="category list-unstyled" style="display: none;">
+                                    <li><a href="" data-id="all">All</a></li>
+                                    <li><a href="" data-id="popular">Popular</a></li>
+                                    <li><a href="" data-id="winter">Winter</a></li>
+                                    <li><a href="" data-id="various">Various</a></li>
+                                    <li><a href="" data-id="exotic">Exotic</a></li>
+                                    <li><a href="" data-id="green">Greens</a></li>
+                                    <li><a href="" data-id="cactuse">Cactuses</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="category d-none d-md-flex list-unstyled">
+                            <li><a href="" data-id="all">All</a></li>
+                             @foreach (var category in Model.Categories)
+                             {
+                                <li><a href="" data-id="@category.Id">@Html.Raw(category.Name)</a></li>
+                             }       
+                            
+                        </ul>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="" class="mr-2">Filter</a>
+                                <i class="fas fa-caret-down"></i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                 <partial name="_ProductsPartial" model="@Model.Products"/>
+                
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUCTS END -->
+
+        <!-- ABOUT START -->
+
+        <section id="about">
+            <div class="container py-5">
+                <div class="row py-5">
+                    <div class="col-lg-6">
+                        <div class="img">
+                            <img src="~/img/h3-video-img.jpg" class="img-fluid" alt="">
+                            <div
+                                class="player position-absolute rounded-circle d-flex align-items-center justify-content-center">
+                                <i class="fas fa-play fa-lg"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about-text mt-5 mt-lg-0 px-lg-5">
+                            <h1>Suprise Your <span>Valentine!</span> Let us arrange a smile.</h1>
+                            <p class="py-3">Where flowers are our inspiration to create lasting memories. Whatever the
+                                occasion...</p>
+                            <ul class="list-unstyled">
+                                <li class="mt-3"><img src="~/img/h1-custom-icon.png" class="mr-2" alt=""> Hand picked just
+                                    for you.</li class="mt-3">
+                                <li class="mt-3"><img src="~/img/h1-custom-icon.png" class="mr-2" alt=""> Unique flower
+                                    arrangements</li>
+                                <li class="mt-3"><img src="~/img/h1-custom-icon.png" class="mr-2" alt=""> Best way to say
+                                    you care.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT END -->
+
+        <!-- EXPERTS START -->
+
+        <section id="experts">
+            <div class="container">
+                <div class="row py-5">
+                    <div class="offset-lg-3 col-lg-6">
+                        <div class="section-title">
+                            <h1>Flower Experts</h1>
+                            <p class="text-black-50">A perfect blend of creativity, energy, communication, happiness and
+                                love. Let us arrange
+                                a smile for you.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row pb-5">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="item text-center">
+                            <div class="img">
+                                <img src="~/img/h3-team-img-1.png" class="img-fluid rounded-circle" alt="">
+                            </div>
+                            <div class="text mt-3">
+                                <h6>CRYSTAL BROOKS</h6>
+                                <p class="text-black-50">Florist</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="item text-center">
+                            <div class="img">
+                                <img src="~/img/h3-team-img-2.png" class="img-fluid rounded-circle" alt="">
+                            </div>
+                            <div class="text mt-3">
+                                <h6>SHIRLEY HARRIS</h6>
+                                <p class="text-black-50">Manager</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="item text-center">
+                            <div class="img">
+                                <img src="~/img/h3-team-img-3.png" class="img-fluid rounded-circle" alt="">
+                            </div>
+                            <div class="text mt-3">
+                                <h6>BEVERLY CLARK</h6>
+                                <p class="text-black-50">Florist</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="item text-center">
+                            <div class="img">
+                                <img src="~/img/h3-team-img-4.png" class="img-fluid rounded-circle" alt="">
+                            </div>
+                            <div class="text mt-3">
+                                <h6>AMANDA WATKINS</h6>
+                                <p class="text-black-50">Florist</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3"></div>
+                    <div class="col-lg-3"></div>
+                    <div class="col-lg-3"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERTS END -->
+
+        <!-- SUBSCRIBE START -->
+
+        <section id="subscribe">
+            <div class="container py-5">
+                <div class="row py-5">
+                    <div class="col-12">
+                        <div class="content text-center py-5">
+                            <h3>Join The Colorful Bunch!</h3>
+                            <div class="form-group d-flex justify-content-center flex-wrap mt-5">
+                                <input type="email" placeholder="Email Address" class="form-control-lg rounded-0">
+                                <button class="btn btn-danger btn-lg rounded-0 px-5 mt-3 mt-sm-0">Subscribe</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SUBSCRIBE END -->
+
+        <!-- BLOG START -->
+
+        
+        @await Component.InvokeAsync("Blog")
+
+
+        <!-- BLOG END -->
+
+        <!-- SAY START -->
+
+        <section id="say">
+            <div class="container">
+                <div class="row py-5 justify-content-center">
+                    <div class="col-md-8 col-xl-6">
+                        <div class="owl-carousel say">
+                            <div>
+                                <div class="item text-center">
+                                    <div class="img d-flex justify-content-center">
+                                        <img src="~/img/testimonial-img-1.png" alt="">
+                                    </div>
+                                    <div class="text text-muted pt-3 pb-5">
+                                        <i>Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus
+                                            lingua. </i>
+                                    </div>
+                                    <div class="author">
+                                        <h6>Anna Barnes</h6>
+                                        <p class="text-black-50">Florist</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="item text-center">
+                                    <div class="img d-flex justify-content-center">
+                                        <img src="~/img/testimonial-img-2.png" alt="">
+                                    </div>
+                                    <div class="text text-muted pt-3 pb-5">
+                                        <i>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+                                            ligula eget. </i>
+                                    </div>
+                                    <div class="author">
+                                        <h6>Jasmine White</h6>
+                                        <p class="text-black-50">Florist</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SAY END -->
+
+        <!-- INSTAGRAM START -->
+
+        <section id="instagram">
+            <div class="owl-carousel instagram">
+                <div><img src="~/img/instagram1.jpg" class="img-fluid" alt=""></div>
+                <div><img src="~/img/instagram2.jpg" class="img-fluid" alt=""></div>
+                <div><img src="~/img/instagram3.jpg" class="img-fluid" alt=""></div>
+                <div><img src="~/img/instagram4.jpg" class="img-fluid" alt=""></div>
+                <div><img src="~/img/instagram5.jpg" class="img-fluid" alt=""></div>
+                <div><img src="~/img/instagram6.jpg" class="img-fluid" alt=""></div>
+                <div><img src="~/img/instagram7.jpg" class="img-fluid" alt=""></div>
+                <div><img src="~/img/instagram8.jpg" class="img-fluid" alt=""></div>
+            </div>
+            <div class="hastag bg-light text-muted py-2 px-3">
+                #FIORELLO
+            </div>
+        </section>
+
+        <!-- INSTAGRAM END -->
+
+    </main>
+
+    <!-- MAIN END -->
+
+
+

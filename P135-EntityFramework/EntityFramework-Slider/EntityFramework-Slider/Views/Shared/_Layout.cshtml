@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="icon" href="~/img/favicon.png" sizes="192x192" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/owlcarousel/owl.theme.default.min.css">
+   
+    <link rel="stylesheet" href="~/css/style.css">
+    <title>@ViewData["Title"] - EntityFramework_Slider</title>
+</head>
+
+<body>
+
+    <!-- HEADER START -->
+
+    @await Component.InvokeAsync("Header")
+
+    <!-- HEADER END -->
+   
+            @RenderBody()
+
+            
+    
+ <!-- FOOTER START -->
+
+    <footer>
+        <div class="container">
+            <div class="row py-5">
+                <div class="col-md-6 col-lg-3">
+                    <div class="item">
+                        <h6>CUSTOMER SERVICE</h6>
+                        <ul class="list-unstyled mt-4">
+                            <li><a class="text-black-50" href="">Help & Contact Us</a></li>
+                            <li><a class="text-black-50" href="">Returns & Refunds</a></li>
+                            <li><a class="text-black-50" href="">Online Stores</a></li>
+                            <li><a class="text-black-50" href="">Terms & Conditions</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="item">
+                        <h6>COMPANY</h6>
+                        <ul class="list-unstyled mt-4">
+                            <li><a class="text-black-50" asp-controller="About" asp-action="Index">About Us</a></li>
+                            <li><a class="text-black-50" href="">Blog</a></li>
+                            <li><a class="text-black-50" href="">Order Tracking</a></li>
+                            <li><a class="text-black-50" href="">FAQ Page</a></li>
+                            <li><a class="text-black-50" href="">Contact Us</a></li>
+                            <li><a class="text-black-50" href="">Login</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="item">
+                        <h6>SOCIAL MEDIA</h6>
+                        <ul class="list-unstyled mt-4">
+                            <li><a class="text-black-50" href="">Twitter</a></li>
+                            <li><a class="text-black-50" href="">Instagram</a></li>
+                            <li><a class="text-black-50" href="">Tumblr</a></li>
+                            <li><a class="text-black-50" href="">Pinterest</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="item">
+                        <h6>ARCHIVE</h6>
+                        <ul class="list-unstyled mt-4">
+                            <li><a class="text-black-50" href="">Designer Shoes</a></li>
+                            <li><a class="text-black-50" href="">Gallery</a></li>
+                            <li><a class="text-black-50" href="">Pricing</a></li>
+                            <li><a class="text-black-50" href="">Feature Index</a></li>
+                            <li><a class="text-black-50" href="">Login</a></li>
+                            <li><a class="text-black-50" href="">Help & Support</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row py-2">
+                <div class=" col-lg-4 text-center text-lg-left">
+                    <p class="text-black-50">Powered by <a class="author text-muted"
+                            href="https://www.bakhtiyar.az">Bakhtiyar Shamilzada</a> 2020</p>
+                </div>
+                <div class=" col-lg-4 text-center">
+                    <img src="~/img/footer-bottom-1.png" class="fluid" alt="">
+                </div>
+                <div class=" col-lg-4 text-center text-lg-right mt-3 mt-lg-0">
+                    <a class="text-black-50 mr-5"
+                        href="https://www.linkedin.com/in/bakhtiyar-shamilzada-145159185/">LINKEDIN</a
+                        class="text-black-50">
+                    <a class="text-black-50" href="https://www.facebook.com/shamilzada.bakhtiyar">FACEBOOK</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FOOTER END -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/e5e249fce2.js" crossorigin="anonymous"></script>
+    <script src="~/owlcarousel/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="~/js/script.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>

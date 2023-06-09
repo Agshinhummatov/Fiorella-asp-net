@@ -1,0 +1,50 @@
+#about
+{
+    .img
+    {
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        img
+        {
+            transition: all .3s;
+        }
+        &:hover
+        {
+            img
+            {
+                transform: scale(1.05);
+            }
+        }
+        .player
+        {
+            width: 100px;
+            height: 100px;
+            background-color: $color-white;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            i
+            {
+                color: $color;
+            }
+        }
+    }
+    .about-text
+    {
+        h1
+        {
+            font-family: $font-family-playfair;
+            span
+            {
+                color: $color;
+            }
+        }
+        p, li
+        {
+            font-family: $font-family-lora;
+            font-size: 17px;
+            line-height: 29px;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+#progress
+{
+    span
+    {
+        font-size: 18px;
+        font-weight: 400;
+        font-family: $font-family-lora;
+    }
+    .progress-title
+    {
+        font-size: 22px;
+        font-family: $font-family-playfair;
+    }
+    
+    .custom-progress
+    {
+        .custom-progress-bar
+        {
+            background-color: $color;
+        }
+    }
+}

@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Category>
+
+@{
+    ViewData["Title"] = "Slider";
+}
+
+<div class="container my-5">
+    @if (User.IsInRole("SuperAdmin"))
+    {
+        <a class="btn btn-success text-white" asp-action="Create" style="float:right;">Create</a>
+    }
+  
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Operations
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var category in Model)
+                {
+                    <tr>
+                        <td class="py-1">
+                           @Html.Raw(category.Name)
+                        </td>
+                        <td>
+                            <a class="btn btn-outline-info" asp-action="Detail" asp-route-id="@category.Id">Info</a>
+                            <a class="btn btn-outline-primary" asp-action="Edit" asp-route-id="@category.Id">Edit</a>
+                            <form style="display: inline-block;" id="category-delete-form" data-id="@category.Id">
+                                <button type="submit" class="btn btn-outline-danger">Delete</button>
+                            </form>
+                           
+                        </td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+

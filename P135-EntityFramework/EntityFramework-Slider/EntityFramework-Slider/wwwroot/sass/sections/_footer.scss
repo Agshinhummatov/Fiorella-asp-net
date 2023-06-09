@@ -1,0 +1,28 @@
+footer
+{
+    background: lighten($color: $color, $amount: 39);
+    .item
+    {
+        h6
+        {
+            font-size: 12px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+        
+    }
+    a
+    {
+        font-size: 12px;
+        transition: color .3s;
+        &:hover
+        {
+            color: $color !important;
+            text-decoration: none;
+        }
+    }
+    p
+    {
+        font-size: 12px;
+    }
+}

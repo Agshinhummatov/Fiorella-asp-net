@@ -1,0 +1,271 @@
+header
+{
+    nav
+    {
+        padding: 0px !important;
+        #logo
+        {
+            width: 205px;
+            height: 25px;
+        }
+        #mobile-navbar-show
+        {
+            cursor: pointer;
+            border: none;
+        }
+      
+        ul
+        {
+            li
+            {
+                position: relative;
+                padding: 38px 20px;
+                a
+                {
+                    position: relative;
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    letter-spacing: .1em;
+                    color: $color-black !important;
+                    font-weight: 500;
+                    &::after
+                    {
+                        content: "";
+                        transition: width .3s;
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 0;
+                        height: 1px;
+                        background-color: $color-black;
+                    }
+                    &:hover
+                    {
+                        &::after
+                        {
+                            width: 80%;
+                        }
+                        text-decoration: none;
+                    }
+                }
+                .fa-search
+                {
+                    transform: rotateY(180deg);
+                }
+                i, span
+                {
+                    cursor: pointer;
+                }
+                ul
+                {
+                    transition: opacity .3s;
+                    background-color: $color-white;
+                    position: absolute;
+                    top: 115px;
+                    left: 0;
+                    width: 228px;
+                    opacity: 0;
+                    visibility: hidden;
+                    z-index: 2;
+                    li
+                    {
+                        padding: 5px 30px;
+                        i
+                        {
+                            font-size: 10px !important;
+                        }
+                        ul
+                        {
+                            opacity: 0 !important;
+                            visibility: hidden !important;
+                            top: 0;
+                            left: 100%;
+                        }
+                        #input-search
+                        {
+                            border: none;
+                            &:focus
+                            {
+                                outline: none;
+                            }
+                        }
+                        &:hover
+                        {
+                            ul
+                            {
+                                opacity: 1 !important;
+                                visibility: visible !important;
+                            }
+                        }
+                    }
+                    .element
+                    {
+                        ul
+                        {
+                            top: 0;
+                            left: -100%;
+                        }
+                    }
+                }
+                .elements
+                {
+                    li
+                    {
+                        text-align: right;
+                    }
+                }
+                .shop
+                {
+                    transition: opacity .3s;
+                    background-color: $color-white;
+                    position: absolute;
+                    top: 115px;
+                    width: 100%;
+                    left: 0;
+                    opacity: 0;
+                    visibility: hidden;
+                    z-index: -1;
+                    ul
+                    {
+                        width: auto;
+                        opacity: 1;
+                        visibility: visible;
+                        position: relative;
+                        top: 0;
+                        li
+                        {
+                            padding: 5px 0;
+                            a
+                            {
+                                padding: 0 !important;
+                            }
+                        }
+                    }
+                }
+                &:hover
+                {
+                    ul
+                    {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                    .shop
+                    {
+                        opacity: 1;
+                        visibility: visible;
+                        z-index: 99;
+                    }
+                }
+            }
+            li.shop-li
+            {
+                position: static;
+            }
+            .shop-cart
+            {
+                sup
+                {
+                    padding: 1px 3px;
+                    color: $color-white;
+                    background-color: $color;
+                }
+                ul
+                {
+                    top: 100px;
+                    left: -70%;
+                    li
+                    {
+                        font-size: 14px;
+                    }
+                }
+            }
+            .search
+            {
+                ul
+                {
+                    visibility: visible;
+                    opacity: 1;
+                    top: 100px;
+                    display: none;
+                    li
+                    {
+                        i
+                        {
+                            font-size: 14px !important;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    .mobile-navbar
+    {
+        transition: all .3s;
+        background-color: $color-white;
+        top: 0;
+        right: 36px;
+        width: 0;
+        opacity: 0;
+        visibility: hidden;
+        .fa-times
+        {
+            position: absolute;
+            top: 50px;
+            right: 50px;
+            cursor: pointer;
+            color: $color;
+        }
+        ul
+        {
+            li
+            {
+                margin-top: 20px;
+                a
+                {
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    color: $color-black;
+                    letter-spacing: .1em;
+                    &:hover
+                    {
+                        text-decoration: none;
+                    }
+                }
+            }
+            ul
+            {
+                display: none;
+                li
+                {
+                    margin-top: 0;
+                    a
+                    {
+                        padding: 0 !important;
+                        text-transform: capitalize;
+                        font-size: 12px;
+                        letter-spacing: 0em;
+                        color: lighten($color: $color-black, $amount: 50);
+                    }
+                }
+                ul
+                {
+                    li
+                    {
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+    .mobile-navbar.active
+    {
+        width: 420px;
+        visibility: visible;
+        opacity: 1;
+        right: 0;
+        z-index: 9;
+    }
+}

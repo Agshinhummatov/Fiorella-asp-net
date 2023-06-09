@@ -1,0 +1,37 @@
+#slider
+{
+    position: relative;
+    .slider
+    {
+        img
+        {
+            min-height: 400px;
+            width: 100% !important;
+        }
+    }
+    .context
+    {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        z-index: 1;
+        h1
+        {
+            font-size: 41px;
+            line-height: 51px;
+            font-family: $font-family-lora;
+            span
+            {
+                color: $color;
+            }
+        }
+        p
+        {
+            font-size: 17px;
+            line-height: 29px;
+            font-family: $font-family-lora;
+        }
+
+    }
+}

@@ -1,0 +1,68 @@
+#accordion-title, #tab-title, #progress-title, #shop-list-title, #product-list-title
+{
+    background-color: lighten($color: $color-black, $amount: 97%);
+    h1
+    {
+        font-size: 50px;
+        font-family: $font-family-playfair;
+    }
+    i
+    {
+        font-family: $font-family-lora;
+        font-size: 17px;
+    }
+}
+
+#accordion
+{
+    .question
+    {
+        transition: all .3s;
+        cursor: pointer;
+        span
+        {
+            font-size: 12px;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+        }
+        &:hover
+        { 
+            background-color: $color;
+            color: $color-white !important;
+        }
+    }
+    .question.active
+    {
+        background-color: $color;
+        color: $color-white !important;
+    }
+    .answer
+    {
+        display: none;
+        p
+        {
+            font-family: $font-family-lora;
+        }
+    }
+    .answer.active
+    {
+        display: block;
+    }
+    .accordion-color
+    {
+        .question
+        {
+            border-bottom: 1px solid lighten($color: $color-black, $amount: 90);
+            &:hover
+            {
+                background-color: $color-white;
+                color: $color !important;
+            }
+        }
+        .question.active
+        {
+            background-color: $color-white;
+            color: $color !important;
+        }
+    }
+}

@@ -1,0 +1,38 @@
+#instagram
+{
+    position: relative;
+    .instagram
+    {
+        div
+        {
+            cursor: pointer;
+            position: relative;
+            &::after
+            {
+                transition: opacity .3s;
+                content: "\f16d";
+                position: absolute;
+                font-family: FontAwesome;
+                top: 52%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: $color-white;
+                font-size: 28px;
+                opacity: 0;
+            }
+            &:hover::after
+            {
+                opacity: 1;
+            }
+        }
+    }
+    .hastag
+    {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        letter-spacing: .2em;
+    }
+}

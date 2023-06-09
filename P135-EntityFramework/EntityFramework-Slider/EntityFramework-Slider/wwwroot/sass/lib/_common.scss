@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lora&display=swap');
+body
+{
+    font-family: $font-family;
+    font-size: $font-size;
+    line-height: $line-height;
+}
+
+::selection
+{
+    background-color: $color;
+    color: $color-white;
+}
+
+.section-title
+{
+    text-align: center;
+    h1
+    {
+        font-family: $font-family-playfair;
+    }
+    p
+    {
+        font-family: $font-family-lora;
+        font-size: 17px;
+        line-height: 29px;
+    }
+}

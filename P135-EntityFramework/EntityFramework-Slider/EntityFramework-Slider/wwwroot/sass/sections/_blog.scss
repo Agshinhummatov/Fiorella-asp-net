@@ -1,0 +1,49 @@
+#blog
+{
+    .item
+    {
+        .img
+        {
+            overflow: hidden;
+            img
+            {
+                cursor: pointer;
+                transition: transform .3s;
+                &:hover
+                {
+                    transform: scale(1.05);
+                }
+            }
+            .date
+            {
+                top: 10px;
+                left: 10px;
+                span
+                {
+                    cursor: pointer;
+                    font-size: 10px;
+                    letter-spacing: .15em;
+                    transition: color .3s;
+                    &:hover
+                    {
+                        color: $color;
+                    }
+                }
+            }
+        }
+        .text
+        {
+            h5
+            {
+                cursor: pointer;
+                font-family: $font-family-playfair;
+                font-size: 22px;
+            }
+            p
+            {
+                font-family: $font-family-lora;
+                line-height: 29px;
+            }
+        }
+    }
+}

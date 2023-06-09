@@ -1,0 +1,41 @@
+﻿@model ProductDetailVM
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<div class="container my-5">
+
+    <div class="form-group">
+        <label class="my-2">Name</label>
+        <input class="form-control" disabled id="customFile" asp-for="Name" />
+    </div>
+    <div class="form-group">
+        <label class="my-2">Description</label>
+        <input class="form-control" disabled id="description-text" value="@ViewBag.desc" />
+    </div>
+    <div class="form-group">
+        <label class="my-2">Price</label>
+        <input type="text" disabled class="form-control" id="customFile" asp-for="Price" />
+    </div>
+    <div class="form-group">
+        <label class="my-2">Count</label>
+        <input class="form-control" disabled id="customFile" asp-for="Count" />
+    </div>
+    <div class="form-group">
+        <label class="my-2">Category</label>
+        <input class="form-control" disabled id="customFile" asp-for="CategoryName" />
+    </div>
+    <div class="form-group">
+        @foreach (var item in Model.Images)
+        {
+            <img src="~/img/@item.Image" style="width:150px;height:150px;" />
+        }
+
+    </div>
+        <div class="form-group">
+            <div class="buttons my-3">
+                <a class="btn btn-light" asp-action="Index">Cancel</a>
+            </div>
+        </div>
+</div>
+

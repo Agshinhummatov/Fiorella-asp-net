@@ -1,0 +1,45 @@
+#subscribe
+{
+    background: url(../img/h3-background-img.jpg);
+    background-attachment: fixed;
+    .content
+    {
+        h3
+        {
+            color: $color-white;
+            font-size: 30px;
+            font-family: $font-family-playfair;
+        }
+        input
+        {
+            border: none;
+            font-size: 12px;
+            font-family: $font-family;
+            padding: 30px !important;
+            width: 100% !important;
+            &:focus
+            {
+                outline: none;
+                box-shadow: none;
+            }
+            @media (min-width: 576px)
+            {
+                width: 50% !important;
+            }
+        }
+        ::placeholder
+        {
+            font-size: 12px;
+            font-family: $font-family;
+        }
+        button
+        {
+            padding: 20px !important;
+            font-size: 12px;
+            font-family: $font-family;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            background-color: $color;
+        }
+    }
+}

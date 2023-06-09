@@ -1,0 +1,23 @@
+﻿@model UserRoleVM
+@{
+    ViewData["Title"] = "AddRoleToUser";
+}
+
+<div class="container my-5">
+    <form asp-action="AddRoleToUser" method="post">
+        <div class="form-group">
+            <label class="my-2">Users</label>
+            <select class="form-control" id="customFile" asp-for="UserId" asp-items="@ViewBag.users"></select>
+        </div>
+
+        <div class="form-group">
+            <label class="my-2">Roles</label>
+            <select class="form-control" id="customFile" asp-for="RoleId" asp-items="@ViewBag.roles"></select>
+        </div>
+        <div class="buttons my-3">
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <a class="btn btn-light" asp-action="Index">Cancel</a>
+        </div>
+    </form>
+</div>
+

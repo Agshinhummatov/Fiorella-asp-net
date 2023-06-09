@@ -1,0 +1,25 @@
+// import lib
+
+@import 'lib/varibales';
+@import 'lib/common';
+@import 'lib/mixins';
+
+// import sections
+
+@import 'sections/header';
+@import 'sections/slider';
+@import 'sections/product';
+@import 'sections/about';
+@import 'sections/experts';
+@import 'sections/subscribe';
+@import 'sections/blog';
+@import 'sections/say';
+@import 'sections/instagram';
+@import 'sections/footer';
+
+// import extra page
+
+@import 'sections/accordion';
+@import 'sections/tab';
+@import 'sections/progress';
+@import 'sections/shop-list';

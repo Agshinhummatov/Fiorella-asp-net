@@ -1,0 +1,71 @@
+#shop-list
+{
+    .product-item
+    {
+        cursor: pointer;
+        position: relative;
+        .overlay
+        {
+            transition: opacity .3s;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(255,255,255,.9);
+            opacity: 0;
+
+            .title
+            {
+                h6
+                {
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    letter-spacing: 0.1em;
+                }
+            }
+            .price
+            {
+                span
+                {
+                    font-size: 12px;
+                }
+            }
+            .button
+            {
+                button
+                {
+                    padding: 15px 40px !important;
+                    font-size: 12px;
+                    font-family: $font-family;
+                    letter-spacing: .1em;
+                    text-transform: uppercase;
+                    background-color: $color;
+                }
+            }
+        }
+        &:hover
+        {
+            .overlay
+            {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+#products
+{
+    .product-item-small
+    {
+        .price
+        {
+            span
+            {
+                margin-left: 0px !important;
+                opacity: 1 !important;
+            }
+            
+        }
+    }
+}

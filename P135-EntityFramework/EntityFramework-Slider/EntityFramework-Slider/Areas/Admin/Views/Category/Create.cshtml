@@ -1,0 +1,25 @@
+﻿@model Category
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container my-5">
+    <span class="text-danger">@ViewBag.error</span>
+    <form class="forms-sample" asp-action="Create">
+        <textarea class="form-control" id="category-text" asp-for="Name" rows="5"></textarea>
+        <span class="text-danger" asp-validation-for="Name"></span>
+        <div class="buttons my-3">
+            <button type="submit" class="btn btn-primary mr-2">Submit</button>
+            <a class="btn btn-light" asp-action="Index">Cancel</a>
+        </div>
+    </form>
+</div>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+    <script src="~/ckeditor/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace("category-text");
+    </script>
+}
+

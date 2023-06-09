@@ -1,0 +1,52 @@
+﻿@model ProductCreateVM
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container my-5">
+    <form asp-action="Create" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label class="my-2">Name</label>
+            <input class="form-control " id="customFile" asp-for="Name" />
+            <span class="text-danger" asp-validation-for="Name"></span>
+        </div>
+        <div class="form-group">
+            <label class="my-2">Description</label>
+            <textarea class="form-control" id="description-text" asp-for="Description" rows="5"></textarea>
+            <span class="text-danger" asp-validation-for="Description"></span>
+        </div>
+        <div class="form-group">
+            <label class="my-2">Price</label>
+            <input type="number" step=".01" class="form-control" id="customFile" asp-for="Price" />
+            <span class="text-danger" asp-validation-for="Price"></span>
+        </div>
+          <div class="form-group">
+            <label class="my-2">Count</label>
+            <input class="form-control" id="customFile" asp-for="Count" />
+            <span class="text-danger" asp-validation-for="Count"></span>
+          </div>
+        <div class="form-group">
+            <label class="my-2">Category</label>
+            <select class="form-control" id="customFile" asp-for="CategoryId" asp-items="@ViewBag.categories"></select>
+        </div>
+        <div class="form-group">
+            <label class="my-2">Images</label>
+            <input class="form-control" id="customFile" asp-for="Photos" />
+            <span class="text-danger" asp-validation-for="Photos"></span>
+        </div>
+        <div class="buttons my-3">
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <a class="btn btn-light" asp-action="Index">Cancel</a>
+        </div>
+    </form>
+</div>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+    <script src="~/ckeditor/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace("description-text");
+    </script>
+}
+
